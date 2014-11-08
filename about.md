@@ -1,11 +1,17 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+伍文瀚
+===
+男 88年 手艺人
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+## 概况
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+- 电话 15830903200
+- 邮箱 wuwenhan@live.cn
+- 主页 www.wuwenhan.com
+- qq 329576084
+- 微博 [@伍文瀚](http://weibo.com/wenhando)
