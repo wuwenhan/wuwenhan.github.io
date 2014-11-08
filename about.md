@@ -13,5 +13,5 @@ permalink: /about/
 - 电话 15830903200
 - 邮箱 wuwenhan@live.cn
 - 主页 www.wuwenhan.com
-- qq 329576084
+- qq   329576084
 - 微博 [@伍文瀚](http://weibo.com/wenhando)
