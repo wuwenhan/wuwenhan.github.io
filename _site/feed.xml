@@ -6,9 +6,39 @@
 </description>
     <link>http://wuwenhan.com/</link>
     <atom:link href="http://wuwenhan.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 08 Nov 2014 09:52:32 +0800</pubDate>
-    <lastBuildDate>Sat, 08 Nov 2014 09:52:32 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Nov 2014 13:32:03 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Nov 2014 13:32:03 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>windows2008配置ftp</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;服务器管理器&lt;/h2&gt;
+
+&lt;p&gt;*2008的系统使用服务器管理器，选择角色，因为我之前已经开启了IIS服务器角色，所以我现在只要添加角色服务即可，如果你没有开启过的话，直接添加角色即可。
+*选择WEB服务器，打开下面的折叠，再选择FTP服务器，然后一直下一步安装即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;ftp&quot;&gt;添加ftp站点&lt;/h2&gt;
+
+&lt;p&gt;*现在在服务器管理器里打开WEB服务器，在站点里面右键添加FTP站点即可&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;检查防火墙设置&lt;/h2&gt;
+
+&lt;p&gt;*检查防火墙出入站规则，需要在防火墙中开启相应的连接许可，进入“控制面板 》系统和安全 》Windows 防火墙 》允许的程序”，在“允许另一个程序”中添加 “C:\Windows\System32\svchost.exe”这个程序&lt;/p&gt;
+
+&lt;h2 id=&quot;ftp-1&quot;&gt;添加ftp用户&lt;/h2&gt;
+
+&lt;p&gt;*net user demo 123456/add 这条命令的demo是用户名，123456是密码&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Nov 2014 19:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/wuwenhan/update/2014/11/10/windows2008-%E9%85%8D%E7%BD%AEftp.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/wuwenhan/update/2014/11/10/windows2008-%E9%85%8D%E7%BD%AEftp.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Hello World!</title>
