@@ -10,8 +10,8 @@ permalink: /about/
 
 ## 概况
 
-- 电话：15830903200
-- 邮箱：wuwenhan@live.cn
-- 主页：www.wuwenhan.com
-- Q Q：329576084
-- 微博：[@伍文瀚](http://weibo.com/wenhando)
+- 电话 ：15830903200
+- 邮箱 ：wuwenhan@live.cn
+- 主页 ：www.wuwenhan.com
+- Q Q ：329576084
+- 微博 ：[@伍文瀚](http://weibo.com/wenhando)
