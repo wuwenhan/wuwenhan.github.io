@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "单例模式"
+date:   2015-07-22 21:22:46
+categories: wuwenhan update
+---
+
 <h2 id="singleton">2、单例模式</h2>
 
 <h5 id="what-is-singleton">2.1、概念</h5>
