@@ -1,12 +1,20 @@
 # Site settings
-title: 伍文瀚
+title: 伍文瀚的博客
 email: wuwenhan@live.cn
-description: > # this means to ignore newlines until "baseurl:"
-  伍文瀚的博客
+description: 伍文瀚，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/wuwenhan。
+keywords: Yii,Yii教程,Laravel视频,wuwenhan,伍文瀚
+skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful,PhpStorm, Stackoverflow, Sublime Text, OmniGaffale, OminiPlan]
+
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://wuwenhan.com" # the base hostname & protocol for your site
 twitter_username: wuwenhan
 github_username:  wuwenhan
+
+url: http://wuwenhan.com
+baseurl:  "/"
+domain:    wuwenhan.com
+permalink:     /articles/:year/:month/:title.html
 
 timezone:    PRC
 encoding:    UTF-8
