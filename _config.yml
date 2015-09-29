@@ -6,11 +6,10 @@ keywords: Yii,Yii教程,Laravel视频,wuwenhan,伍文瀚
 skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful,PhpStorm, Stackoverflow, Sublime Text, OmniGaffale, OminiPlan]
 
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+
 url: "http://wuwenhan.com" # the base hostname & protocol for your site
 twitter_username: wuwenhan
 github_username:  wuwenhan
-
 url: http://wuwenhan.com
 baseurl:  "/"
 domain:    wuwenhan.com
