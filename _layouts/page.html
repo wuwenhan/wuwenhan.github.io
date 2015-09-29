@@ -1,14 +1,32 @@
 ---
 layout: default
 ---
-<div class="post">
+<section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 3}}">
+    <div class="container">
+        <div class="collection-title">
+            <h1 class="collection-header">{{ page.title }}</h1>
+            {% if page.subtitle %}
+                <div class="collection-info">
+                    <span class="meta-info">
+                        {{ page.subtitle}}
+                    </span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!-- / .banner -->
+ <section class="container content">
+        <div class="columns">
+            <div class="column three-fourths" >
+                <article class="article-content markdown-body">
+                    {{ content }}
+                </article>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+                <div class="comment">
+                    {% include disqus-comments.html %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section.content -->
