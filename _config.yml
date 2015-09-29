@@ -10,8 +10,6 @@ skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful,Ph
 url: "http://wuwenhan.com" # the base hostname & protocol for your site
 twitter_username: wuwenhan
 github_username:  wuwenhan
-url: http://wuwenhan.com
-baseurl:  "/"
 domain:    wuwenhan.com
 permalink:     /articles/:year/:month/:title.html
 
