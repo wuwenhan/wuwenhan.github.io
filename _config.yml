@@ -12,3 +12,9 @@ timezone:    PRC
 encoding:    UTF-8
 # Build settings
 markdown: kramdown
+highlighter: pygments
+lsi:         false
+excerpt_separator: "\n\n"
+
+paginate_path: 'page:num'
+paginate:   10
