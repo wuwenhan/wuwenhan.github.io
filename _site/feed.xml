@@ -1,14 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>伍文瀚</title>
-    <description>伍文瀚的博客
-</description>
+    <title>伍文瀚的博客</title>
+    <description>伍文瀚，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/wuwenhan。</description>
     <link>http://wuwenhan.com/</link>
     <atom:link href="http://wuwenhan.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 20 Nov 2014 16:25:40 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Nov 2014 16:25:40 +0800</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Tue, 29 Sep 2015 22:44:39 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Sep 2015 22:44:39 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>让听见炮声的人指挥战斗</title>
+        <description>&lt;p&gt;企业管理层的目标，就是建立流程化的组织，企业家威望很高，大家都很崇敬他的时候，这个时候是企业最危险的时候，也是最没有希望的时候，因为这就是透支个人能力，在弥补组织的缺陷，企业最有生命的时候，企业家在企业没有太大作用的时候.&lt;/p&gt;
+
+&lt;p&gt;管理，必须按照流程来确定职责，权利，责任，使组织的决策更多的不是依赖企业家个人的决策，让整个企业管理变得简单、高效、低成本，管理的方法论看似无生命其实是有生命的，它的生命力体现在什么地方呢，就是一代一代分类者的生命终结了，但是你的管理体系会越来越成熟，每一代的管理者都会给他的体系添砖加瓦，并且代代相传，声声不息.这样好比巴萨罗那的足球队，你只要在我的体系内，我换教练，他只会不断完善这个体系，他走了，另一个人也能带领球队走向冠军。&lt;/p&gt;
+
+&lt;p&gt;你越来越了解怎么驾驭变化的规律，你的组织能力就塑造出来了，这是我们华人企业家最缺少的，管理要不断的从定性走向定量，从语文走向数学，要学会经营数据和实时数据的管理，不是要超越，而是要补课，以不变应对未知的变化，我们无法准测预知未来，但我们可以通过归纳找到方向，要不断激活队伍,并且使自己处在合理的组织机构，和优良的竞技状态，不断调整组织机构，以预防未来。&lt;/p&gt;
+
+&lt;p&gt;科学的组织机构，业务流程，管理体制，个人岗位职责，配套规范手册，怎么完成人岗匹配。&lt;/p&gt;
+
+&lt;p&gt;流程体系 以用户为中心，强调流程驱动，&lt;/p&gt;
+
+&lt;p&gt;以美国特种部队打塔利班的例子建立流程驱动，军队环境是最不确定的，只有靠平常的训练做好准备，美国打仗与以前不同，以前需要一层一层申请，请示指挥，而现在三个人一个小组，一个是战斗专家，一个情报专家，一个火力专家&lt;/p&gt;
+
+&lt;p&gt;战斗专家战术技能最强，主要职责保护这个小组，情报专家是发现目标的战斗集群，然后定位，火力专家岗位职责，看到这样的集群用什么火力去攻击，消灭它，这三个人事一个小组，三个岗位的人每个都懂一点对方领域的知识，好处交流起来很方便，万一有人受伤了，另一个人可以补上来&lt;/p&gt;
+
+&lt;p&gt;美军快速变化响应非常快，机制变了，有很高的授权，5000万美元以内可以直接呼唤炮火，250万一个战斧式导弹，也就是可以呼唤20个战斧导弹。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Aug 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/08/%E5%9B%A2%E9%98%9F%E7%BB%8F%E9%AA%8C.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/08/%E5%9B%A2%E9%98%9F%E7%BB%8F%E9%AA%8C.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>当情怀已经烂大街，我们还可以谈些什么</title>
+        <description>&lt;p&gt;几年前，情怀还是个清新脱俗如空谷幽兰每一个音节都透着一股独立气息的词，任何事情挂上情怀二字，瞬间就弱化了其追逐利益的一面，逼格提高了N个level。&lt;/p&gt;
+
+&lt;p&gt;但是，由于众所周知的某手机的神来之笔，情怀二字瞬间变成了眼高手低的代言词。&lt;/p&gt;
+
+&lt;p&gt;所以，作为一惯敏于行而衲与演的码农群体，我们今天不谈情怀，我们谈谈别的，比如说理想。&lt;/p&gt;
+
+&lt;p&gt;理想不是文艺青年的专用词，理想也不是靠45度仰望天空就能实现的白日梦。但是每个人都有理想，无论接地气的理想诸如赚大钱还是曲高和睦的理想比如说周游世界浪漫得如同古罗马的唱诗人，是理想，就值得尊重。&lt;/p&gt;
+
+&lt;p&gt;我不知道每一个程序猿的理想是什么，但是我知道，你们通往理想的天梯必然是由一行行代码砌成的。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jul 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/07/%E6%83%85%E6%80%80.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/07/%E6%83%85%E6%80%80.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>写p2p项目中感受</title>
+        <description>&lt;p&gt;写这个项目后对yii和php的设计模式更有深层的感受，如果你是用面向对象的思想去考虑问题你写出来的项目就是面向对象的程序，如果你用面向过程的想法去写程序那么你写出来的程序就是面向过程的程序，写程序并不在于程序是怎么样的，而在于你自己的设计理解。对程序中项目分工也有了深一层理解，以前我做都是按模块分，现在知道了还可以按业务分。也深深感觉到了程序分工中的问题。&lt;/p&gt;
+
+&lt;p&gt;项目如同战争，好比你分工说你和谁打辽沈、你和谁打淮海、你和谁打平津，在这之后就开始布置更细的分工，谁要在几点几分攻打下那，和某某部队会合。这之间如果安排不当就会出问题，可能谁过了几天还没攻打下来，过了战斗时机，全军覆没。但也不至于，可能谁会去救援，再来个迂回，但是整体的策划就需要改变。&lt;/p&gt;
+
+&lt;p&gt;记得上个p2p项目写支付接口用了两天，可这次支付接口竟然写了两个星期。&lt;/p&gt;
+
+&lt;p&gt;在这个项目开始，几乎身边的人都说不可能完成，某某说要等他熟悉了才开始写，某某说不知道怎么开始写，某某说这个项目太大了，肯定按时做不完。项目开始后先告诉他们怎么开始写这个项目，并写了个例子应该怎么写，然后进行分工，问题就来了，明明可以百度到问题还要问，想要他们问的是选择题，可每次问我的都是问答题。带他们打了淮海，还得自己打平津，最后api估计也得留给自己写。做这个项目发现自己费力不讨好，带会了还惹埋怨。我这是图啥呢，一开始自己写不就好了。&lt;/p&gt;
+
+&lt;p&gt;主要是自己不会带团队，如何带团队一条心呢，现在的不是团队……&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Jul 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/07/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/07/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>单例模式</title>
+        <description>&lt;h2 id=&quot;singleton&quot;&gt;2、单例模式&lt;/h2&gt;
+
+&lt;h5 id=&quot;what-is-singleton&quot;&gt;2.1、概念&lt;/h5&gt;
+&lt;p&gt;保证一个类仅有一个实例，并且提供一个访问它的全局访问点。单例又分懒汉、饿汉（PHP不支持）、登记式。&lt;/p&gt;
+
+&lt;h5 id=&quot;feature-singleton&quot;&gt;2.2、特点&lt;/h5&gt;
+
+&lt;p&gt;1、一个类只有一个实例&lt;/p&gt;
+
+&lt;p&gt;2、它必须自行创建这个实例&lt;/p&gt;
+
+&lt;p&gt;3、必须自行向整个系统提供这个实例&lt;/p&gt;
+
+&lt;h5 id=&quot;when-use-singleton&quot;&gt;2.3、适合场景&lt;/h5&gt;
+
+&lt;p&gt;1、当类只能有一个实例而且客户可以从一个众所周知的访问点访问它时&lt;/p&gt;
+
+&lt;p&gt;2、当这个唯一实例应该是通过子类化可扩展的。并且用户应该无需更改代码就能使用一个扩展的实例时。&lt;/p&gt;
+
+&lt;h5 id=&quot;issue-singleton&quot;&gt;2.4、问题&lt;/h5&gt;
+
+&lt;p&gt;假设现在有一个保存应用信息的类Preference,我们可以用它来保存如用户信息的字符串、文件路径等。这些信息在你每次调用时候都可能有所不同。类似一个“公告板”，它是可以被系统中其他无关对象设置和获取信息的中心。&lt;/p&gt;
+
+&lt;p&gt;但是问题来了，如果在对象中直接传递Preference,让原来并不使用Preference对象的类强制接受Preference对象，会产生耦合。&lt;/p&gt;
+
+&lt;p&gt;我们还需要保证系统中所有对象都使用的同一个Preference对象。&lt;/p&gt;
+
+&lt;h5 id=&quot;solution-singleton&quot;&gt;2.5、解决&lt;/h5&gt;
+
+&lt;p&gt;我们可以从强制控制对象的实例化开始。&lt;/p&gt;
+
+&lt;pre&gt;
+
+&amp;lt;?php 
+
+class Preference
+{
+    private $props = array();
+
+    private static $instance;
+    
+    //防止外界实例化对象
+    private function __construct()
+    {
+
+    }
+    //防止外界clone实例
+    private function __clone()
+    {
+
+    }
+    
+    public static function getInstance()
+    {
+        if (empty(self::$instance)) {
+            self::$instance = new Preference();
+        }
+
+        return self::$instance;
+    }
+
+    public function setProperty($key,$val)
+    {
+        $this-&amp;gt;props[$key] = $val;
+    }
+
+    public function getProperty($key)
+    {
+        return $this-&amp;gt;props[$key];
+    }
+}
+
+$pref = Preference::getInstance();
+$pref-&amp;gt;setProperty(&quot;name&quot;,&quot;xujiajun&quot;);
+unset($pref);
+$pref2 = Preference::getInstance();
+echo $pref2-&amp;gt;getProperty(&quot;name&quot;);//输出xujiajun  key为name的属性值并没有丢失。
+&lt;/pre&gt;
+
+&lt;h5 id=&quot;result-singleton&quot;&gt;2.6、效果总结&lt;/h5&gt;
+
+&lt;p&gt;因为单例在系统任何地方都可以被访问，所以它们可能导致很难调试的依赖关系。如果改变一个单例，那么所有使用该单例的类可能都会受到影响。虽然我们在每次声明一个特定类型的参数的方法时，也都创建了依赖关系。问题是当单例被使用时，依赖便会被隐藏在方法内部，并没有出现在方法的声明中,这使得系统的依赖关系更加难以追踪。&lt;/p&gt;
+
+&lt;p&gt;当然，适当的使用单例可以改进系统的设计。在OOP编程中，单例模式是一种全局变量的改进。你无法用错误类型的数据覆盖一个单例。这种保护尤其不支持命名空间的PHP版本中尤其重要。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jul 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/07/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/07/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>记录</title>
+        <description>&lt;p&gt;有一家大排档，老板叫朱哥，糙老爷们儿一个，皮肤黝黑，经常捏着一把蒲扇在烟雾中晃悠。青椒猪肝面是他的招牌，还有各式盖烧饭、山东煎饼、炭烤生蚝、应有尽有。用食物慰藉这个城市的单身贵族们，附近大厦的上班族给朱哥的店起了个很应景的名字：单身食堂。&lt;/p&gt;
+
+&lt;p&gt;朱哥手上有很多故事，多数是食客讲的，他们就着啤酒，大口吃着肉，见朱哥老师，就什么秘密都告诉他。缺爱的男男女女，骂老板的小职员，刚吵过架的小情侣，比一台晚会还生动。&lt;/p&gt;
+
+&lt;p&gt;其中有个叫方岚的女孩儿，在背后大厦的广告公司上班，恋爱史干净，距离上一段爱情已经空窗两年多，分手初期痛得瓷牙咧嘴的，现在已经对前任这个词免疫，人始终要向前看，她在等待最好的爱情。&lt;/p&gt;
+
+&lt;p&gt;陈土木，人如其名，戴着黑框眼镜，平头工科男，永远是一身宽大的素色衬衫和裤子。大学隔壁专业的女汉子喜欢他，暗示的方法千奇百怪，但就抵不过他那木讷脑子，不了了之。所以直到现在，他都没有完整谈一场恋爱，工作又是网站的夜班编辑，过着美国时间，只有电脑咖啡作伴，别说女汉子，连个汉子都没有。&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 28 Jun 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/06/%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/06/%E8%AE%B0%E5%BD%95.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>2014年工作总结</title>
+        <description>&lt;p&gt;2014年7月入职到现在，已经过去大半年了。在这半年来经历的很多，感受也很多。&lt;/p&gt;
+
+&lt;p&gt;回想当初面试的时候心里想公司已经有了一定的规模，各方面做起来应该都比较容易，但是进入公司之后发现事情要困难的多。作为部门经理当时的想法是要先定一些规范，把大家的节奏都统一起来，但是技术上却欠缺了太多，所以又进行了一些简短的培训，慢慢的前端终于可以出一些可用的产品，在后端研发上将git、版本控制并通过框架终于让他们懂得开发上的一些相关步骤。慢慢的大家相互探讨，相互研究，进步的很快。在这个过程中我一直希望可以把更好的一面让大家看到，希望大家在工作中感到快乐。&lt;/p&gt;
+
+&lt;p&gt;这段日子里，我看到了自己的成长，同时也看到了大家的进步。工作中，我也会经常遇到难题，很多技术上的问题，通过不断的学习和沟通，当解决了这些难题时我也会由衷的感受到快乐。半年来，带着周写cms,带着利亚写B2B,指导杨做网站，可能是自己的脾气急一些对向南还是指导的少些。其实我一直希望现在对他们多指导一些，做项目的时候对他们多讲一些，让他们以后可以少走一些弯路。虽然有时候项目紧了会偶尔加班，但是我认为这是对工作负责的态度。&lt;/p&gt;
+
+&lt;p&gt;做一个合格的技术经理不仅要做好技术方面的工作，也要做好管理工作。这期间，在管理方面我明白了很多，首先要把自己放在公司建设的总体框架中来定位自己，审视自己。时时刻刻以公司利益为先，协助领导管理好公司，在语言表达的能力上，在协调关系的能力上，在组织管理的能力上，在完成工作的标准上表现出色。我会尽力打造一支优秀的技术团队，创造合适工作的环境和氛围，让大家在一个好的状态下发挥出最大的能力。会积极的树立典范，处理好各方面的关系，加强沟通协调，做好工作。&lt;/p&gt;
+
+&lt;p&gt;虽然这段时间里我成长了很多，但还是感觉出了自己很多的不足。主要在于缺乏相关管理的经验、工作方式不够灵活，我并不是一个善于沟通的人，但是这往往是最大的问题，好的事情也可能并没有传达好。在这一方面我是欠缺的。有些错误发生了，即使我再去调整，还是会有痕迹的。所以在以后的工作中，我一定时时刻刻注意修正自己不足的地方，养成良好的工作习惯。&lt;/p&gt;
+
+&lt;p&gt;在接下来的日子里，我会虚心的学习，带领大家一起进步，同时做好管理工作，一同走向一个新的高度。&lt;/p&gt;
+
+&lt;p&gt;我认为一个人价值, 在于你真正产生了多大的贡献, 为公司, 为他人..
+如果你真正做出了真正有价值的贡献, 那么你就可以得到于价值相当的肯定. 或多点, 或少点, 或早点, 或晚点。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Jan 2015 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/01/2014%E5%B9%B4%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/01/2014%E5%B9%B4%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>ubuntu添加ftp用户</title>
+        <description>&lt;p&gt;groupadd ftptest&lt;/p&gt;
+
+&lt;p&gt;useradd -G ftptest -d /var/www -M user1&lt;/p&gt;
+
+&lt;p&gt;passwd user1&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Jan 2015 23:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/01/ubuntu%E6%B7%BB%E5%8A%A0ftp%E7%94%A8%E6%88%B7.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/01/ubuntu%E6%B7%BB%E5%8A%A0ftp%E7%94%A8%E6%88%B7.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>微信配置本地调试</title>
+        <description>&lt;h2 id=&quot;ngrok&quot;&gt;下载注册ngrok&lt;/h2&gt;
+
+&lt;p&gt;注册ngrok会得到token&lt;/p&gt;
+
+&lt;h2 id=&quot;ngrok-1&quot;&gt;切换到下载ngrok目录&lt;/h2&gt;
+
+&lt;p&gt;配置本地ip映射到二级域名&lt;/p&gt;
+
+&lt;p&gt;ngrok -authtoken 注册时的token 对应ip和接口
+ngrok -subdomain=wwhweixin 192.168.33.10:80&lt;/p&gt;
+
+&lt;p&gt;现在已经可以使用了&lt;/p&gt;
+</description>
+        <pubDate>Sat, 17 Jan 2015 17:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2015/01/%E5%BE%AE%E4%BF%A1%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2015/01/%E5%BE%AE%E4%BF%A1%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>配置并使用 HHVM、Nginx 和 Laravel</title>
@@ -237,8 +504,8 @@ $ composer create-project laravel/laravel laravel
 
 </description>
         <pubDate>Thu, 20 Nov 2014 19:22:46 +0800</pubDate>
-        <link>http://wuwenhan.com/wuwenhan/update/2014/11/20/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</link>
-        <guid isPermaLink="true">http://wuwenhan.com/wuwenhan/update/2014/11/20/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</guid>
+        <link>http://wuwenhan.com/articles/2014/11/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2014/11/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</guid>
         
         
         <category>wuwenhan</category>
@@ -267,24 +534,8 @@ $ composer create-project laravel/laravel laravel
 &lt;p&gt;*net user demo 123456/add 这条命令的demo是用户名，123456是密码&lt;/p&gt;
 </description>
         <pubDate>Mon, 10 Nov 2014 19:22:46 +0800</pubDate>
-        <link>http://wuwenhan.com/wuwenhan/update/2014/11/10/windows2008-%E9%85%8D%E7%BD%AEftp.html</link>
-        <guid isPermaLink="true">http://wuwenhan.com/wuwenhan/update/2014/11/10/windows2008-%E9%85%8D%E7%BD%AEftp.html</guid>
-        
-        
-        <category>wuwenhan</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello World!</title>
-        <description>&lt;p&gt;Hello World!&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 01 Nov 2014 00:24:46 +0800</pubDate>
-        <link>http://wuwenhan.com/wuwenhan/update/2014/11/01/hello-world.html</link>
-        <guid isPermaLink="true">http://wuwenhan.com/wuwenhan/update/2014/11/01/hello-world.html</guid>
+        <link>http://wuwenhan.com/articles/2014/11/windows2008-%E9%85%8D%E7%BD%AEftp.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2014/11/windows2008-%E9%85%8D%E7%BD%AEftp.html</guid>
         
         
         <category>wuwenhan</category>
