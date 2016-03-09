@@ -17,7 +17,6 @@ timezone:    PRC
 encoding:    UTF-8
 # Build settings
 markdown: kramdown
-highlighter: pygments
 lsi:         false
 excerpt_separator: "\n\n"
 
