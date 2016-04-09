@@ -7,31 +7,6 @@ categories: wuwenhan update
 
 ##1.故事的开始
 
-	远程master分支下代码被不小心提交了很多垃圾代码或项目删掉，想要回滚到以前的某一版本并删除commit log。怎么办？
-
-	情景很简单。老板上传了个文件，我把他删掉了。有一种办法，把文件再push下，但是也不想他看到图中那comment（ps：这样我才不会被fire）。实现上面场景的代码如下：
-<pre>
-	vim A.txt
-
-	git add .
-
-	git commit -a -m "add A.txt"
-
-	git push
-
-	rm A.txt
-
-	git commit -a -m "我删除了老板的东西"
-
-	git push
-</pre>
-	————–分割线 ————–
-
-	一头雾水的小白怎么办？怎么办？怎么办？
-
-	push到远程的提交默认是不能修改的，但是一定要修改不是不行：
-
-	git push -f
 
  
 
