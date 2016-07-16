@@ -13,7 +13,7 @@
 .site-title {
     font-size: 26px;
     line-height: 56px;
-    color:#fff;
+    
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -22,6 +22,9 @@
     &:visited {
         color: $grey-color-dark;
     }
+}
+.site-title a{
+    color:#fff;
 }
 
 .site-nav {
@@ -73,9 +76,11 @@
         .trigger {
             clear: both;
             display: none;
+            
+        }
+        .trigger a{
             color:#fff;
         }
-
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
