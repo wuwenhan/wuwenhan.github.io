@@ -5,7 +5,7 @@
    // border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
-
+    background: #4183c4;
     // Positioning context for the mobile navigation icon
     position: relative;
 }
@@ -13,6 +13,7 @@
 .site-title {
     font-size: 26px;
     line-height: 56px;
+    color:#fff;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -72,6 +73,7 @@
         .trigger {
             clear: both;
             display: none;
+            color:#fff;
         }
 
         &:hover .trigger {
@@ -185,7 +187,7 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 21px;
 }
 
 
