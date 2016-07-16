@@ -13,7 +13,7 @@
 .site-title {
     font-size: 26px;
     line-height: 56px;
-    
+    color:#fff;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -23,9 +23,7 @@
         color: $grey-color-dark;
     }
 }
-.site-title a{
-    color:#fff;
-}
+
 
 .site-nav {
     float: right;
@@ -36,7 +34,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #fff;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
