@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "数据库权限划分"
+date:   2016-07-28 21:22:46
+categories: wuwenhan update
+---
+
+
+### 总括
+>在我们实际管理数据库时，往往涉及到给指定用户数据库分配权限问题，
+>网上很多关于操作数据库指令已经很相信，
+>但是针对我们实际操作时，我们只需要以下几个命令就能完成对数据库权限的操作：
+
+### 1.创建用户
+ insert into mysql.user(Host,User,Password) values("%","wenhan",password("wenhan"));
+
+### 2.创建分配数据库
+ CREATE DATABASE  `wenhan` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+### 3.给用户分配指定库权限
+ grant all privileges on wenhan.* to wenhan@"%" identified by 'wenhan';
+
+### 4.刷新系统权限表
+ flush privileges; 
+
+### 更改用户所在HOST(若第一步正确可忽略)
+ update user set Host='%' where User='wenhan';
