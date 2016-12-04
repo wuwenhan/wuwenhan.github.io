@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  color: #111111;
+  color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
 
@@ -70,8 +70,8 @@ a {
   a:visited {
     color: #1756a9; }
   a:hover {
-    color: #111111;
-    text-decoration: underline; }
+    color: #111;
+    text-decoration: none; }
 
 /**
  * Blockquotes
@@ -147,19 +147,20 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background: #4183c4;
   position: relative; }
 
 .site-title {
   font-size: 26px;
   line-height: 56px;
+  color: #fff;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #fdfdfd; }
 
 .site-nav {
   float: right;
@@ -167,7 +168,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111111;
+    color: #fff;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -192,10 +193,12 @@ pre {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: #fdfdfd; }
       .site-nav .trigger {
         clear: both;
         display: none; }
+      .site-nav .trigger a {
+        color: #fff; }
       .site-nav:hover .trigger {
         display: block;
         padding-bottom: 5px; }
@@ -276,7 +279,7 @@ pre {
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 21px; }
 
 /**
  * Posts
@@ -340,32 +343,32 @@ pre {
     font-style: italic; }
   .highlight .gd {
     color: #000;
-    background-color: #ffdddd; }
+    background-color: #fdd; }
   .highlight .gd .x {
     color: #000;
-    background-color: #ffaaaa; }
+    background-color: #faa; }
   .highlight .ge {
     font-style: italic; }
   .highlight .gr {
-    color: #aa0000; }
+    color: #a00; }
   .highlight .gh {
-    color: #999999; }
+    color: #999; }
   .highlight .gi {
     color: #000;
-    background-color: #ddffdd; }
+    background-color: #dfd; }
   .highlight .gi .x {
     color: #000;
-    background-color: #aaffaa; }
+    background-color: #afa; }
   .highlight .go {
-    color: #888888; }
+    color: #888; }
   .highlight .gp {
-    color: #555555; }
+    color: #555; }
   .highlight .gs {
     font-weight: bold; }
   .highlight .gu {
-    color: #aaaaaa; }
+    color: #aaa; }
   .highlight .gt {
-    color: #aa0000; }
+    color: #a00; }
   .highlight .kc {
     font-weight: bold; }
   .highlight .kd {
@@ -378,20 +381,20 @@ pre {
     color: #458;
     font-weight: bold; }
   .highlight .m {
-    color: #009999; }
+    color: #099; }
   .highlight .s {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .na {
-    color: teal; }
+    color: #008080; }
   .highlight .nb {
-    color: #0086b3; }
+    color: #0086B3; }
   .highlight .nc {
     color: #458;
     font-weight: bold; }
   .highlight .no {
-    color: teal; }
+    color: #008080; }
   .highlight .ni {
-    color: purple; }
+    color: #800080; }
   .highlight .ne {
     color: #900;
     font-weight: bold; }
@@ -399,52 +402,52 @@ pre {
     color: #900;
     font-weight: bold; }
   .highlight .nn {
-    color: #555555; }
+    color: #555; }
   .highlight .nt {
-    color: navy; }
+    color: #000080; }
   .highlight .nv {
-    color: teal; }
+    color: #008080; }
   .highlight .ow {
     font-weight: bold; }
   .highlight .w {
-    color: #bbbbbb; }
+    color: #bbb; }
   .highlight .mf {
-    color: #009999; }
+    color: #099; }
   .highlight .mh {
-    color: #009999; }
+    color: #099; }
   .highlight .mi {
-    color: #009999; }
+    color: #099; }
   .highlight .mo {
-    color: #009999; }
+    color: #099; }
   .highlight .sb {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .sc {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .sd {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .s2 {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .se {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .sh {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .si {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .sx {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .sr {
     color: #009926; }
   .highlight .s1 {
-    color: #dd1144; }
+    color: #d14; }
   .highlight .ss {
     color: #990073; }
   .highlight .bp {
-    color: #999999; }
+    color: #999; }
   .highlight .vc {
-    color: teal; }
+    color: #008080; }
   .highlight .vg {
-    color: teal; }
+    color: #008080; }
   .highlight .vi {
-    color: teal; }
+    color: #008080; }
   .highlight .il {
-    color: #009999; }
+    color: #099; }

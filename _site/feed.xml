@@ -5,9 +5,132 @@
     <description>伍文瀚，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/wuwenhan。</description>
     <link>http://wuwenhan.com/</link>
     <atom:link href="http://wuwenhan.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 29 Sep 2015 22:44:39 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Sep 2015 22:44:39 +0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Fri, 22 Jul 2016 22:30:23 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jul 2016 22:30:23 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>git回滚远程版本</title>
+        <description>&lt;p&gt;使用git管理项目开发的过程中经常会碰到这种情况：某次提交已经push到了远程仓库，可是突然意识到“天哪，我怎么做了这么蠢的事情”。那么问题来了，怎么将远程代码库回滚呢？&lt;/p&gt;
+
+&lt;p&gt;在网上看到大部分人给出的解决方案是先将本地回滚，然后删除远程分支，之后再将本地的分支push到远程仓库，这其实是一种很危险的方案，毕竟直接删除远程分支太狠了，不推荐这样做。。。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1、删除最后一次提交&lt;/h3&gt;
+
+&lt;p&gt;这种情况是最简单的了，只需要以下两步就可以了&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git revert HEAD
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;注意，revert和reset的区别:&lt;/p&gt;
+
+&lt;p&gt;revert是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在，而reset是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git revert HEAD
+git log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;历史记录中还有第三次提交的记录，并且多了一次的提交，但是仓库内容已经回到了第二次提交之后的状态&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard HEAD^
+git log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;历史记录中已经没有之前revert生成的提交记录了，现在应该明白了吧。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2、删除历史某次提交&lt;/h3&gt;
+
+&lt;p&gt;这种情况需要先用git log命令在历史记录中查找到想要删除的某次提交的commit id&lt;/p&gt;
+
+&lt;p&gt;然后执行以下命令（”commit id”替换为想要删除的提交的”commit id”，需要注意最后的^号，意思是commit id的前一次提交）&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase -i &lt;span class=&quot;s2&quot;&gt;&quot;commit id&quot;&lt;/span&gt;^
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;执行该条命令之后会打开一个编辑框，列出了包含该次提交在内之后的所有提交&lt;/p&gt;
+
+&lt;p&gt;然后在编辑框中删除你想要删除的提交所在行，然后保存退出就好啦，如果有冲突的需要解决冲突。接下来，执行以下命令，将本地仓库提交到远程库就完成了：&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push origin master -f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3、修改历史某次提交&lt;/h3&gt;
+
+&lt;p&gt;这种情况的解决方法类似于第二种情况，只需要在第二条打开编辑框之后，将你想要修改的提交所在行的pick替换成edit然后保存退出，这个时候rebase会停在你要修改的提交，然后做你需要的修改，修改完毕之后，执行以下命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add .
+git commit --amend
+git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;如果你在之前的编辑框修改了n行，也就是说要对n次提交做修改，则需要重复执行以上步骤n次。&lt;/p&gt;
+
+&lt;p&gt;需要注意的是，在执行rebase命令对指定提交修改或删除之后，该次提交之后的所有提交的”commit id”都会改变。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Apr 2016 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2016/04/git%E5%9B%9E%E6%BB%9A%E8%BF%9C%E7%A8%8B%E7%89%88%E6%9C%AC.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2016/04/git%E5%9B%9E%E6%BB%9A%E8%BF%9C%E7%A8%8B%E7%89%88%E6%9C%AC.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>最牛的编程套路</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;1.写一份自己的简历，把自己所有的相关技能列出来，然后把那些在100年后还用得到的标出来。给每个技能打分，满分为10分。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2.罗列出你所景仰的程序员。尽量包括那些与你一起工作的人，因为你会在工作中从他们身上获取一些技能。记录下他们身上的1~2个闪光点，也就* 是你希望自己有所提高的方面。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;3.查看维基百科上的“计算机科学” 栏目，找到“计算机领域先驱者” 这个分类（网址：http://zh.wikipedia.org/wiki/Category:计算机领域先驱者），从这个列表中挑选一个人，阅读他的事迹，并且在阅读时打开任何你感兴趣的链接。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4.花20分钟通读别人的代码，读出色的代码和读糟糕的代码都是有益的，两者都要读，轮流切换。如果你无法感受出它们之间的区别，可以求助于* 一位你尊敬的程序员，让他给你展示一下什么事出色的代码，什么事糟糕的代码。把你读过的代码也给别人看看，问问他们的看法。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;5.罗列出你最喜欢的10个编程工具——那些你觉得你用得最多、缺了它们不行的工具，从中随机挑选一个，花一个小时去阅读它的文档，在这一个小* 时里，努力去学习这个工具的某个你不曾意识到的新功能，或者发现某种新的使用方法。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;6.想一想，除了编程之外你最擅长什么事情？再想一想，你是通过怎样的锻炼才变得如此熟练和专业的？这对于你的编程工作又有什么启发呢？（* 怎么把这些经验应用到编程方面？）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;7.拿出一叠简历，并和一组面试官在同一个房间里待上一个小时。确保每份简历都至少被3个面试官看过，并且要给出1~3分的评分。针对那些不同* 面试官评判大相径庭的简历展开讨论。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;8.参与一个电话面试。事后写下你的反馈，抛出你的观点，然后与主持电话面试的人聊一聊，看看你们是否达成了一致的结论。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;9.进行一次技术面试，并且被面试的人应该是某个你不太了解的领域里的专家，让他假定听众在该领域里一无所知，因此请他从最基础的的讲起，* 努力去理解他所说的，必要时问一些问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;10.有机会参与别人的技术面试。期间，你只是认真的听，认真的学。在应聘者努力解决技术问题的同时，你也要在自己脑子里尝试解决这些问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;11找到一个能和你交换实际问题的人，每隔一周，相互交流编程问题，花10~15分钟来尝试解决这些问题，再用10~15分钟进行讨论（无论能否解决 ）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;12.当听到任何一时间你也无法解决的面试问题时，赶紧回到你的座位上，把这个问题用电子邮件发给自己，以留作日后的提醒，在那一周里找出点时间，用自己最喜欢的编程语言来解决它。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 06 Mar 2016 05:22:46 +0800</pubDate>
+        <link>http://wuwenhan.com/articles/2016/03/%E6%9C%80%E7%89%9B%E7%9A%84%E7%BC%96%E7%A8%8B%E5%A5%97%E8%B7%AF.html</link>
+        <guid isPermaLink="true">http://wuwenhan.com/articles/2016/03/%E6%9C%80%E7%89%9B%E7%9A%84%E7%BC%96%E7%A8%8B%E5%A5%97%E8%B7%AF.html</guid>
+        
+        
+        <category>wuwenhan</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>让听见炮声的人指挥战斗</title>
@@ -253,11 +376,11 @@ echo $pref2-&amp;gt;getProperty(&quot;name&quot;);//输出xujiajun  key为name�
     
       <item>
         <title>微信配置本地调试</title>
-        <description>&lt;h2 id=&quot;ngrok&quot;&gt;下载注册ngrok&lt;/h2&gt;
+        <description>&lt;p&gt;##下载注册ngrok&lt;/p&gt;
 
 &lt;p&gt;注册ngrok会得到token&lt;/p&gt;
 
-&lt;h2 id=&quot;ngrok-1&quot;&gt;切换到下载ngrok目录&lt;/h2&gt;
+&lt;p&gt;##切换到下载ngrok目录&lt;/p&gt;
 
 &lt;p&gt;配置本地ip映射到二级域名&lt;/p&gt;
 
@@ -269,273 +392,6 @@ ngrok -subdomain=wwhweixin 192.168.33.10:80&lt;/p&gt;
         <pubDate>Sat, 17 Jan 2015 17:22:46 +0800</pubDate>
         <link>http://wuwenhan.com/articles/2015/01/%E5%BE%AE%E4%BF%A1%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95.html</link>
         <guid isPermaLink="true">http://wuwenhan.com/articles/2015/01/%E5%BE%AE%E4%BF%A1%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95.html</guid>
-        
-        
-        <category>wuwenhan</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>配置并使用 HHVM、Nginx 和 Laravel</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;前提条件&lt;/h2&gt;
-&lt;p&gt;此文章适用于 Ubuntu 12.04 LTS 和 14.04 LTS
-在你的 Mac 上通过 Brew &lt;a href=&quot;http://learnaholic.me/2012/10/10/installing-nginx-in-mac-os-x-mountain-lion/&quot;&gt;在 Mac 上安装 nginx&lt;/a&gt; and 在 &lt;a href=&quot;https://github.com/facebook/hhvm/wiki/Building-and-installing-HHVM-on-OSX-10.8&quot;&gt;Mac 上安装 hhvm&lt;/a&gt;） 也可以安装。&lt;/p&gt;
-
-&lt;p&gt;关于如何在其他发行版或版本的服务器上安装 HHVM 可以看 &lt;a href=&quot;http://docs.hhvm.com/manual/en/install.php&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;OK，我们开始吧！&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;安装基本组件&lt;/h2&gt;
-&lt;p&gt;首先，我们先安装一些后续过程需要的基本组件：&lt;/p&gt;
-
-&lt;pre&gt;
-$ sudo apt-get update
-$ sudo apt-get install -y unzip vim git-core curl wget build-essential python-software-properties
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;nginx&quot;&gt;安装Nginx&lt;/h2&gt;
-
-&lt;p&gt;接下来我们安装 Nginx。由于 hhvm 包会检测系统中是否已经安装了 Nginx（或者 Apache），并对其配置做一些修改，所以我将先安装 Ngin。我们还需要添加 ppa:nginx/stable 仓库来获取最新版本的 Nginx，一般最新版本都会包含一些安全方面的更新。&lt;/p&gt;
-
-&lt;pre&gt;
-$ sudo add-apt-repository -y ppa:nginx/stable
-$ sudo apt-get update
-$ sudo apt-get install -y nginx
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;hhvm&quot;&gt;安装HHVM&lt;/h2&gt;
-&lt;p&gt;现在轮到 HHVM 了，我们将参照 &lt;a href=&quot;https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04&quot;&gt;官方文档&lt;/a&gt; 来安装 HHVM，包括以 FashCGI 模式启动 HHVM。&lt;/p&gt;
-
-&lt;p&gt;在此之前，HHVM-Fastcgi 是一个单独的安装包。现在不是了。&lt;/p&gt;
-
-&lt;h3 id=&quot;ubuntu-1204&quot;&gt;Ubuntu 12.04:&lt;/h3&gt;
-&lt;pre&gt;
-$ sudo add-apt-repository -y ppa:mapnik/boost
-$ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
-$ echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
-$ sudo apt-get update
-$ sudo apt-get install -y hhvm
-&lt;/pre&gt;
-
-&lt;h3 id=&quot;ubuntu-1404&quot;&gt;Ubuntu 14.04:&lt;/h3&gt;
-&lt;pre&gt;
-$ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
-$ echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list
-$ sudo apt-get update
-$ sudo apt-get install -y hhvm
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;hhvm-1&quot;&gt;配置 HHVM&lt;/h2&gt;
-&lt;p&gt;HHVM 安装完成之后，你会看到输出的一些重要信息，注意看一下：&lt;/p&gt;
-&lt;pre&gt;
-********************************************************************
-* HHVM is installed. Here are some more things you might want to do:
-* 
-* Configure your webserver to use HHVM:
-* $ sudo /usr/share/hhvm/install_fastcgi.sh
-* $ sudo /etc/init.d/nginx restart
-* $ sudo /etc/init.d/apache restart
-* $ sudo /etc/init.d/hhvm restart
-* 
-* Run command line scripts with HHVM:
-* $ hhvm whatever.php
-* 
-* Use HHVM for /usr/bin/php even if you have php-cli installed:
-* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
-********************************************************************
-&lt;/pre&gt;
-
-&lt;p&gt;HHVM 自带了一个脚本来帮我们安装并配置 FastCGI！我们来运行这个脚本：&lt;/p&gt;
-&lt;pre&gt;
-$ sudo /usr/share/hhvm/install_fastcgi.sh # This restarts Nginx for us
-
-# Set this to start on system bootup
-$ sudo update-rc.d hhvm defaults
-
-# Restart the service now
-$ sudo service hhvm restart                      # We&#39;ll also restart HHVM
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;php&quot;&gt;运行 PHP&lt;/h2&gt;
-
-&lt;p&gt;现在，HHVM 本质上就是一个完整的 PHP 代码的运行环境了，因此我们没有必要安装 PHP 了。&lt;/p&gt;
-
-&lt;p&gt;安装之后，你就可以像使用 PHP 一样使用 hhvm。比如，你可以像下面这样运行 PHP 源码文件：&lt;/p&gt;
-
-&lt;pre&gt;
-$ hhvm some_file.php
-&lt;/pre&gt;
-
-&lt;p&gt;由于某些组件(composer, phpunit) 默认还是会依赖 “php” (其实是 php-cli) ，我们需要找一种方式让他们运行 HHVM 而不是 PHP。回顾一下上面 HHVM 安装完之后输出的一些信息，那里面已经告诉你如何实现这个需求了：is&lt;/p&gt;
-
-&lt;pre&gt;
-$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
-&lt;/pre&gt;
-
-&lt;p&gt;现在就可以像往常一样运行 “php” 了！&lt;/p&gt;
-
-&lt;pre&gt;
-$ php -v
-HipHop VM 3.0.0 (rel)  
-Compiler: tags/HHVM-3.0.0-0-g59a8db46e4ebf5cfd205fadc12e27a9903fb7aae  
-Repo schema: 48906efe08d29a403bbe13414f32ccd256708e0b 
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;fast-cgi&quot;&gt;Fast-CGI&lt;/h2&gt;
-&lt;p&gt;HHVM 其实已经帮我们配置好 Nginx 了。注意到 /etc/nginx/hhvm.conf 这个文件了吗。如果你以前使用过 PHP-FPM ， hhvm.conf 也是类似的内容：&lt;/p&gt;
-
-&lt;pre&gt;
-# Note this will work with &quot;hack&quot; files as well as php files!
-location ~ \.(hh|php)$ {  
-    fastcgi_keep_conn on;
-    fastcgi_pass   127.0.0.1:9000;
-    fastcgi_index  index.php;
-    fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    include        fastcgi_params;
-}
-&lt;/pre&gt;
-
-&lt;p&gt;打开 Nginx 自带的 /etc/nginx/sites-available/default 文件，你将看到这里面已经将 hhvm.conf 文件引入了：&lt;/p&gt;
-
-&lt;pre&gt;
-... Stuff above this omitted ...
-    # Make site accessible from http://localhost/
-    server_name localhost;
-    include hhvm.conf;  # 就是这里!!!
-
-    location / {
-... Stuff below this omitted ...
-&lt;/pre&gt;
-
-&lt;p&gt;HHVM 的开发者很 Nice，帮我们做了很多工作，让 HHVM 的使用异常傻瓜化！&lt;/p&gt;
-
-&lt;h2 id=&quot;php-&quot;&gt;跑一把 PHP 代码&lt;/h2&gt;
-&lt;p&gt;接下来我们就来玩一把吧！注意 Nginx 默认的文档根目录是 root/usr/share/nginx/html，这里包含了一个 index.html 文件，如果我们访问本地服务器，将看到如下文件内容&lt;/p&gt;
-
-&lt;pre&gt;
-vagrant@vaprobash:~$ curl localhost  
-Welcome to nginx!  
-&lt;/pre&gt;
-
-&lt;p&gt;下面我们就来创建一个 index.php 文件测试一下吧。下面这一样代码就是 index.php 文件中的所有内容，也就是仅仅调用了 phpinfo() 函数：&lt;/p&gt;
-
-&lt;pre&gt;
-$ echo &quot;&amp;lt;?php phpinfo();&quot; | sudo tee  /usr/share/nginx/html/index.php;
-&lt;/pre&gt;
-&lt;p&gt;试着运行一下：&lt;/p&gt;
-
-&lt;pre&gt;
-vagrant@vaprobash:~$ curl localhost/index.php  
-HipHop
-&lt;/pre&gt;
-&lt;p&gt;太棒了！phpinfo() 函数在 HHVM 环境中输出了 “HipHop”，我们知道这样就运行成功了！&lt;/p&gt;
-
-&lt;h2 id=&quot;laravel&quot;&gt;Laravel&lt;/h2&gt;
-&lt;p&gt;通过上面的设置，安装 Laravel 其实就和平时的做法一样。由于我们为 HHVM 建了一个软连接到 php 命令，所以只要像平时一样执行其他安装任务即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;nginx-1&quot;&gt;配置 Nginx&lt;/h2&gt;
-&lt;p&gt;我们来为 Laravel 快速创建一个 Nginx 配置。我们假定 Laravel 项目在 /vagrant 目录下面（网站的根目录就要设置为 /vagrant/laravel/public 了）。现在创建 /etc/nginx/sites-available/laravel 文件如下：&lt;/p&gt;
-
-&lt;pre&gt;
-server {  
-    listen 80 default_server;
-
-    root /vagrant/laravel/public;
-    index index.html index.htm index.php;
-
-    server_name localhost;
-
-    access_log /var/log/nginx/localhost.laravel-access.log;
-    error_log  /var/log/nginx/locahost.laravel-error.log error;
-
-    charset utf-8;
-
-    location / {
-        try_files \$uri \$uri/ /index.php?\$query_string;
-    }
-
-    location = /favicon.ico { log_not_found off; access_log off; }
-    location = /robots.txt  { log_not_found off; access_log off; }
-
-    error_page 404 /index.php;      
-
-    include hhvm.conf;  # The HHVM Magic Here
-
-    # Deny .htaccess file access
-    location ~ /\.ht {
-        deny all;
-    }
-}
-&lt;/pre&gt;
-
-&lt;p&gt;此配置将替代 Nginx 自带的 default 配置文件。为了我们的讲解方面，我们将删除 default 文件的软连接，使其不起作用，并且启用刚才创建的 laravel 配置文件：&lt;/p&gt;
-&lt;pre&gt;
-$ sudo rm /etc/nginx/sites-enabled/default   # Remove the sym-linked default config
-$ sudo ln -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/laravel    # Create a sym-link to the laravel config
-&lt;/pre&gt;
-
-&lt;p&gt;然后让 Nginx 重新加载配置文件：&lt;/p&gt;
-&lt;pre&gt;
-$ sudo service nginx reload
-&lt;/pre&gt;
-
-&lt;p&gt;安装 Composer
-按照平时的方式在全局环境中安装 composer 即可：&lt;/p&gt;
-&lt;pre&gt;
-$ curl -sS https://getcomposer.org/installer | php
-$ sudo mv composer.phar /usr/local/bin/composer
-&lt;/pre&gt;
-
-&lt;h2 id=&quot;laravel-1&quot;&gt;安装 Laravel&lt;/h2&gt;
-&lt;p&gt;然后我们就可以利用 Composer 来创建一个新的 Laravel 项目了。我们就把这个新项目叫做 laravel 吧，那么, 根据上面的目录安排，我们执行如下指令：&lt;/p&gt;
-
-&lt;pre&gt;
-# Move to /vagrant so we install Laravel
-# into /vagrant/laravel
-$ cd /vagrant
-$ composer create-project laravel/laravel laravel
-&lt;/pre&gt;
-
-&lt;p&gt;稍等一会儿，Composer 将自动安装 Laravel 所依赖的扩展包。接下来就可以在浏览器中看到 Laravel 的启动画面了！&lt;/p&gt;
-
-&lt;p&gt;我觉得 &lt;a href=&quot;https://github.com/facebook/hhvm/wiki/_pages&quot;&gt;Github Wiki&lt;/a&gt; 和 &lt;a href=&quot;http://docs.hhvm.com/manual/en/index.php&quot;&gt;HHVM&lt;/a&gt; 官网 上的信息会随着项目的推进而快速更新。幸好关于错误报告和设置方面的文档也将逐步完善。不过目前的文档要么就是不全，要么就是太旧了。如果你找到更好的文档，别忘了通知我一声！&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 20 Nov 2014 19:22:46 +0800</pubDate>
-        <link>http://wuwenhan.com/articles/2014/11/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</link>
-        <guid isPermaLink="true">http://wuwenhan.com/articles/2014/11/%E9%85%8D%E7%BD%AE%E5%B9%B6%E4%BD%BF%E7%94%A8%20HHVM%E3%80%81Nginx%20%E5%92%8C%20Laravel.html</guid>
-        
-        
-        <category>wuwenhan</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>windows2008配置ftp</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;服务器管理器&lt;/h2&gt;
-
-&lt;p&gt;*2008的系统使用服务器管理器，选择角色，因为我之前已经开启了IIS服务器角色，所以我现在只要添加角色服务即可，如果你没有开启过的话，直接添加角色即可。
-*选择WEB服务器，打开下面的折叠，再选择FTP服务器，然后一直下一步安装即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;ftp&quot;&gt;添加ftp站点&lt;/h2&gt;
-
-&lt;p&gt;*现在在服务器管理器里打开WEB服务器，在站点里面右键添加FTP站点即可&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;检查防火墙设置&lt;/h2&gt;
-
-&lt;p&gt;*检查防火墙出入站规则，需要在防火墙中开启相应的连接许可，进入“控制面板 》系统和安全 》Windows 防火墙 》允许的程序”，在“允许另一个程序”中添加 “C:\Windows\System32\svchost.exe”这个程序&lt;/p&gt;
-
-&lt;h2 id=&quot;ftp-1&quot;&gt;添加ftp用户&lt;/h2&gt;
-
-&lt;p&gt;*net user demo 123456/add 这条命令的demo是用户名，123456是密码&lt;/p&gt;
-</description>
-        <pubDate>Mon, 10 Nov 2014 19:22:46 +0800</pubDate>
-        <link>http://wuwenhan.com/articles/2014/11/windows2008-%E9%85%8D%E7%BD%AEftp.html</link>
-        <guid isPermaLink="true">http://wuwenhan.com/articles/2014/11/windows2008-%E9%85%8D%E7%BD%AEftp.html</guid>
         
         
         <category>wuwenhan</category>
