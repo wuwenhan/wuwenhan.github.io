@@ -13,9 +13,7 @@ permalink: /about/
 {% for keyword in site.skill_keywords %} <button class="btn btn-outline" type="button">{{ keyword }}</button> {% endfor %}
 </div>
 
-## 教育
-- 冀中职业学院计算机网络技术专业 — 大专 2007 - 2010
-- 河北大学 — 本科 2010 - 2013 （接本）
+
 
 ## 概况
 
