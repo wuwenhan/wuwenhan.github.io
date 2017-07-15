@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "git团队的正确使用方法"
+date:   2017-07-15 21:22:46
+categories: wuwenhan update
+---
+
+### 创建git分支，然后切换到dev分支：
+
+```sh
+git checkout -b dev
+```
+
+git checkout命令加上-b参数表示创建并切换，相当于下面两条命令
+
+```sh
+git branch dev
+git checkout dev
+```
+
+### 查看当前分支：
+
+```sh
+
+git branch
+
+```
+
+### 提交分支
+
+```sh
+git add readme.txt //添加文件
+git commit -m 'branch test' //提交文件
+git checkout master //切换到主分支
+git merge dev   //合并开发分支
+```
+
+### 删除分支
+
+```sh
+git branch -d dev //删除分支
+```
+
+```sh
+git branch //删除分支后查看分支
+```
