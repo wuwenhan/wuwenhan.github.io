@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "git团队的正确使用方法"
+date:   2017-07-15 21:22:46
+categories: wuwenhan update
+---
+
+### 创建git分支，然后切换到dev分支,开始开发：
+
+```sh
+git checkout -b dev
+```
+
+### 提交分支，修改readme文件
+
+```sh
+git add readme.txt //添加文件
+git commit -m 'branch test' //提交文件
+git checkout master //切换到主分支
+git merge dev   //合并开发分支
+```
+
+### 合并发现冲突文件
+
+```sh
+$ git merge feature1
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+### 查看冲突问题
+
+```sh
+$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Unmerged paths:
+#   (use "git add/rm <file>..." as appropriate to mark resolution)
+#
+#       both modified:      readme.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+```
+
+### 直接打开修改问题文件
+
+Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们修改如下后保存：
+
+```sh
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
+Git has a mutable index called stage.
+Git tracks changes of files.
+<<<<<<< HEAD
+Creating a new branch is quick & simple.
+=======
+Creating a new branch is quick AND simple.
+>>>>>>> feature1
+```
+### 修复后再提交
+
+```sh
+$ git add readme.txt 
+$ git commit -m "conflict fixed"
+[master 59bc1cb] conflict fixed
+```
+
+### git log可查看合并情况
+
+```sh
+*   59bc1cb conflict fixed
+|\
+| * 75a857c AND simple
+* | 400b400 & simple
+|/
+* fec145a branch test
+```
+
+### 最后，删除feature1分支：
+
+```sh
+git branch -d dev
+```
+工作完成。
