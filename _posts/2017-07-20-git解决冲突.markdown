@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "git团队的正确使用方法"
-date:   2017-07-15 21:22:46
+title:  "git解决冲突"
+date:   2017-07-20 21:22:46
 categories: wuwenhan update
 ---
 
