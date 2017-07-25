@@ -14,7 +14,8 @@ git checkout -b dev
 ### 提交分支，修改readme文件
 
 ```sh
-git add readme.txt //添加文件add
+
+git add readme.txt //添加文件readme.txt
 git commit -m 'branch test' //提交文件
 git checkout master //切换到主分支
 git merge dev   //合并开发分支
