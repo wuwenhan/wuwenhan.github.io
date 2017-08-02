@@ -1,0 +1,93 @@
+---
+layout: post
+title:  "从学习go中的匿名字段想到的"
+date:   2017-08-02 21:22:46
+categories: wuwenhan update
+---
+
+最近学习go语言，在go语言中发现了struct类型，发现struct类型中有一个属性是匿名字段，感觉这个属性非常好用，主要用法如下
+
+```go
+package main
+
+import "fmt"
+
+type Human struct {
+	name string
+	age int
+	weight int
+}
+
+type Student struct {
+	Human  // 匿名字段，那么默认Student就包含了Human的所有字段
+	speciality string
+}
+```
+
+这样我就可以使用另个类所有的字段，非常强大。
+
+因为本身是做php的吗，所以重新看了一下所有php中关于匿名的问题，温习一下php的匿名函数问题：
+
+```php
+<?php
+$greet = function($name)
+{
+    printf("Hello %s\r\n", $name);
+};
+
+$greet('World');
+$greet('PHP');
+?>
+```
+匿名函数（Anonymous functions），也叫闭包函数（closures），允许 临时创建一个没有指定名称的函数。最经常用作回调函数（callback）参数的值。当然，也有其它应用的情况。
+
+匿名函数目前是通过 Closure 类来实现的。
+
+闭包函数也可以作为变量的值来使用。PHP 会自动把此种表达式转换成内置类 Closure 的对象实例。把一个 closure 对象赋值给一个变量的方式与普通变量赋值的语法是一样的，最后也要加上分号
+
+闭包可以从父作用域中继承变量。 任何此类变量都应该用 use 语言结构传递进去。 PHP 7.1 起，不能传入此类变量： superglobals、 $this 或者和参数重名。
+
+```php
+<?php
+$message = 'hello';
+
+// 没有 "use"
+$example = function () {
+    var_dump($message);
+};
+echo $example();
+
+// 继承 $message
+$example = function () use ($message) {
+    var_dump($message);
+};
+echo $example();
+
+// Inherited variable's value is from when the function
+// is defined, not when called
+$message = 'world';
+echo $example();
+
+// Reset message
+$message = 'hello';
+
+// Inherit by-reference
+$example = function () use (&$message) {
+    var_dump($message);
+};
+echo $example();
+
+// The changed value in the parent scope
+// is reflected inside the function call
+$message = 'world';
+echo $example();
+
+// Closures can also accept regular arguments
+$example = function ($arg) use ($message) {
+    var_dump($arg . ' ' . $message);
+};
+$example("hello");
+?>
+```
+
+这些变量都必须在函数或类的头部声明。 从父作用域中继承变量与使用全局变量是不同的。全局变量存在于一个全局的范围，无论当前在执行的是哪个函数。而 闭包的父作用域是定义该闭包的函数（不一定是调用它的函数）。
